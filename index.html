@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WeatherApp</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="./index.css">
+</head>
+<body>
+    <div class="box">
+      <div class="container">  
+        <nav class="navbar navbar-expand-lg">
+          <form class="d-flex mx-auto my-4 search-field">
+            <input id="location" class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn-primary text-white btn-outline-success" type="button" id="submit">Search</button>
+          </form>
+        </nav>
+        <!-- --------------------------------------------- -->
+        <div class="main">
+          <div class="row">
+            <div class="col col-md-6 col-lg-4 left">
+                <div>
+                  Humidity:
+                  <span id="humidity">89%</span>
+                  <br>
+                  Wind:
+                  <span id="wind">8kmph</span>
+                  <!-- <span id="mph">5mph</span> -->
+                </div>
+            </div>
+
+            <div class="col col-md-12 col-lg-4 mid">
+              <div id="city">Delhi</div>
+              <div class="d-flex justify-content-between">
+                <div class="img">
+                  <img src="./images/clear.png" alt="" id="weather-img">
+                </div>
+                <div class="temp-data d-flex">
+                  <div class="temp" id="temp">33</div>
+                  <div class="temp-unit">
+                    <span class="unit px-1" id="deg-celcius">℃</span>
+                    <span>|</span>
+                    <span class="unit px-1" id="deg-fahren">℉</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col col-md-6 col-lg-4 text-end right">
+              <div>Weather<br>
+              <span id="time">Friday,3:00pm</span><br>
+              <span class="text-capitalize" id="desc">Clear</span>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="py-5 graph-menu">
+              <a href="#">Temperature</a>
+              <a href="#">Precipitation</a>
+              <a href="#">Wind</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+</body>
+</html>
